@@ -1,0 +1,39 @@
+﻿@model TomGoogleBooks.Models.Book
+
+<div class="pt-4">
+
+    <div class="card container" style="border:1px solid #808080;">
+
+        <div class="card-header text-light row" style="border-radius: 0px; background-color:#A9A9A9">
+            <div class="col-12 col-md-9">
+                <h6 class="text-dark">@Model.Title</h6>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <div class="container rounded p-2">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="@Model.SmallThumbnail" style="border-radius:35px;" width="25%" class="rounded" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-2">
+                        <span class="badge rounded-pill bg-success">
+                            @Html.DisplayFor(modelItem => Model.PageCount)
+                        </span>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+
+        <div class="card-footer row">
+            <div class="col-12 col-md-6">
+                <button type="submit" class="btn btn-info form-control btn-lg" style="height:50px;"> Description </button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
