@@ -1,0 +1,28 @@
+﻿@model TomGoogleBooks.Models.Book
+
+<form asp-action="GetBookByISBN">
+
+    <div class="row">
+
+        <div class="col-5">
+
+            <div class="input-group">
+                <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" class="form-control" id="txtPesquisar" name="isbn" placeholder="ISBN">
+            </div>
+
+        </div>
+
+        <div class="col-1">
+            <button type="submit" class="btn btn-secondary mb-2">Pesquisar</button>
+        </div>
+
+    </div>
+
+</form>
+
+<div class="table-responsive">
+
+    <partial name="~/Views/Book/PartialViews/_TableBook.cshtml" />
+
+</div>

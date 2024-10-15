@@ -1,0 +1,40 @@
+﻿@model TomGoogleBooks.Models.Book
+
+<div class="card border-secondary col-6">
+
+    @if(Model.Title != null)
+    {
+        <div class="row g-0">
+
+            <div class="col-md-4">
+
+                <img src="@Model.SmallThumbnail" width="60%" class="m-2 img-fluid rounded-start">
+
+            </div>
+
+            <div class="col-md-8">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">@Model.Title</h5>
+
+                    <p class="card-text">@Model.SubstringDescription()</p>
+
+                    <p class="card-text"><small class="text-body-secondary">@Model.Authors</small></p>
+
+                    <span class="badge rounded-pill text-bg-success">@Model.PageCount</span>                    
+
+                </div>
+
+                <div class="card-footer text-end">
+
+                    <button type="submit" class="btn btn-secondary"> Description </button>
+
+                </div>
+
+            </div>
+
+        </div>
+    }
+    
+</div>
