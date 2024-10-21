@@ -1,5 +1,5 @@
-using TomGoogleBooks.Interfaces;
-using TomGoogleBooks.Services;
+using TomBooks.Interfaces;
+using TomBooks.Services;
 
 namespace TomGoogleBooks
 {
@@ -9,7 +9,7 @@ namespace TomGoogleBooks
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddHttpClient<IGoogleBook, GoogleBookService>(c => c.BaseAddress = new Uri(builder.Configuration["ServiceUrls:GoogleAPI"]));            
+            builder.Services.AddHttpClient<IBook, BookService>(c => c.BaseAddress = new Uri(builder.Configuration["ServiceUrls:BookAPI"]));            
 
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

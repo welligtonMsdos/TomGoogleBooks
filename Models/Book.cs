@@ -1,9 +1,10 @@
 ﻿using System.Xml.Linq;
 
-namespace TomGoogleBooks.Models;
+namespace TomBooks.Models;
 
 public class Book
 {
+    public long ISBN { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
     public string PageCount { get; set; }

@@ -1,0 +1,39 @@
+﻿@model TomBooks.Models.Book
+
+<div class="modal-dialog modal-lg">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <h3><i class="fa-solid fa-book" style="margin-right: 5px"></i>Synopsis of the book.</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+
+            <fieldset disabled>
+
+                <div class="row mb-3">
+
+                    <div class="col-12">                      
+
+                        <label for="Textarea1" class="form-label">Description</label>
+
+                        <textarea class="form-control" id="FormControlTextarea1" rows="10">@Model.Description</textarea>
+
+                    </div>                    
+
+                </div>             
+
+            </fieldset>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+

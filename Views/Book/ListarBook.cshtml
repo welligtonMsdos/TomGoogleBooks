@@ -1,8 +1,8 @@
-﻿@model TomGoogleBooks.Models.Book
+﻿@model TomBooks.Models.Book
 
 <form asp-action="GetBookByISBN">
 
-    <div class="row">
+    <div class="row .col-auto col-md-12 col-sm-10">
 
         <div class="col-5">
 
@@ -13,7 +13,7 @@
 
         </div>
 
-        <div class="col-1">
+        <div class="col-1" style="margin-left:15px">
             <button type="submit" class="btn btn-secondary mb-2">Pesquisar</button>
         </div>
 
@@ -21,8 +21,14 @@
 
 </form>
 
-<div class="table-responsive">
+<div>
 
-    <partial name="~/Views/Book/PartialViews/_TableBook.cshtml" />
+    <partial name="~/Views/Book/PartialViews/_CardBook.cshtml" />
 
 </div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_BookScripts");
+    }   
+}

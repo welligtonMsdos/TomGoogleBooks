@@ -1,4 +1,4 @@
-namespace TomGoogleBooks.Models
+namespace TomBooks.Models
 {
     public class ErrorViewModel
     {
